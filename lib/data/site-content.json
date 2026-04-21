@@ -1,0 +1,320 @@
+{
+  "site": {
+    "name": "Jean de Dieu Sessou",
+    "role": "Backend Developer",
+    "copyright": "© 2026 Jean de Dieu Sessou. All rights reserved.",
+    "metadata": {
+      "defaultTitle": "Jean de Dieu Sessou — Backend Developer",
+      "titleTemplate": "%s — Jean de Dieu Sessou",
+      "description": "Portfolio of Jean de Dieu Sessou — backend developer building intelligent APIs, matching systems, and reliable products."
+    }
+  },
+  "navigation": {
+    "brandLabel": "Jean de Dieu",
+    "links": [
+      { "href": "/", "label": "Home" },
+      { "href": "/about", "label": "About" },
+      { "href": "/projects", "label": "Projects" },
+      { "href": "/blog", "label": "Blog" },
+      { "href": "/services", "label": "Services" },
+      { "href": "/contact", "label": "Contact" }
+    ]
+  },
+  "hero": {
+    "availabilityBadge": "Available for freelance",
+    "name": "Jean de Dieu Sessou",
+    "title": "Backend developer.",
+    "intro": "I build intelligent APIs and reliable systems that solve real business problems.",
+    "highlights": [
+      "From idea to live product — I handle everything, frontend to backend.",
+      "Built to grow with you — from your first user to your first thousand.",
+      "Your product stays secure, fast, and ready to scale from day one."
+    ],
+    "portraitImage": "https://media.licdn.com/dms/image/v2/D4E03AQEMGsX-8ON5Ww/profile-displayphoto-crop_800_800/B4EZ1NsMtaIUAI-/0/1775124971422?e=1778112000&v=beta&t=S_rBx3CzaifXmkZJl5-yRW8Ge6R2GlWu2Vb1bfFsLXQ",
+    "typingAnimation": {
+      "typeSpeed": 150,
+      "delay": 500,
+      "loop": true,
+      "cursorStyle": "underscore"
+    },
+    "primaryCta": {
+      "label": "Let's talk",
+      "href": "/contact"
+    },
+    "secondaryCta": {
+      "label": "Resume",
+      "href": "https://drive.google.com/file/d/1f_BlZEG-yheUAmi4xLB_oncQrtxhlPhx/view"
+    },
+    "socialLinks": [
+      {
+        "href": "https://github.com/johnOfGod33",
+        "label": "GitHub",
+        "handle": "@johnOfGod33"
+      },
+      {
+        "href": "https://linkedin.com/in/jean-de-dieu-sessou-260897292",
+        "label": "LinkedIn",
+        "handle": "in/jean-de-dieu-sessou"
+      },
+      {
+        "href": "https://x.com/jeandedieudev",
+        "label": "X",
+        "handle": "@jeandedieudev"
+      }
+    ]
+  },
+  "projectsSection": {
+    "kicker": "Projects",
+    "title": "Selected work",
+    "viewAllLabel": "View all projects",
+    "loadMoreLabel": "Load more projects"
+  },
+  "projects": [
+    {
+      "id": "p1",
+      "title": "Password Generator",
+      "description": "this website will generate a ramdom password. Depending on the chosen criteria we'll have a weak, medium, strong and very strong ",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "image": "https://github.com/johnOfGod33/password-generator/raw/main/assets/passwordGenerator.PNG",
+      "liveUrl": "https://johnofgod33.github.io/password-generator/",
+      "githubUrl": "https://github.com/johnOfGod33/password-generator"
+    },
+    {
+      "id": "p4",
+      "title": "Second-Hand Marketplace API",
+      "description": "Full marketplace backend for buying and selling second-hand items — with user auth, product listings, search, and secure payment integration.",
+      "image": "https://avatars.githubusercontent.com/u/141136058?v=4",
+      "tags": ["Python", "FastAPI", "PostgreSQL", "Stripe"],
+      "liveUrl": "",
+      "githubUrl": ""
+    },
+    {
+      "id": "p2",
+      "title": "Kizo — Event Platform",
+      "description": "Co-founded and built a platform that helps people discover events, receive personalized reminders, and connect around shared experiences.",
+      "image": "https://avatars.githubusercontent.com/u/141136058?v=4",
+      "tags": ["Next.js", "Supabase", "MongoDB", "TypeScript"],
+      "liveUrl": "https://kizo.app"
+    },
+    {
+      "id": "p3",
+      "title": "Smart-Match — Job Matching",
+      "description": "AI-powered job matching platform that scores compatibility between job seekers and offers using NLP and embedding algorithms. The project that landed me at Edomatch.",
+      "image": "https://avatars.githubusercontent.com/u/141136058?v=4",
+      "tags": ["Python", "FastAPI", "NLP", "Vector DB"],
+      "githubUrl": "https://github.com/johnOfGod33/Smart-Match"
+    },
+    {
+      "id": "p5",
+      "title": "Personal Blog API",
+      "tags": ["Node.js", "Express", "MongoDB", "JWT"],
+      "description": "A RESTful API that would power a personal blog.The client interface can be found",
+      "image": "https://github.com/johnOfGod33/Personal-Blog-API/raw/main/assets/Personal%20blog%20api.png",
+      "liveUrl": "https://personal-blog-api-7cge.onrender.com/api-docs/",
+      "githubUrl": "https://github.com/johnOfGod33/Personal-Blog-API"
+    },
+    {
+      "id": "p6",
+      "title": "Admin Blog Panel",
+      "tags": ["React.js", "Node.js", "Express", "MongoDB", "JWT"],
+      "description": "A web application that allows users to create and manage blog posts ",
+      "image": "https://github.com/johnOfGod33/admin-blog-panel/raw/main/src/assets/img/articles_homepage.png",
+      "githubUrl": "https://github.com/johnOfGod33/admin-blog-panel"
+    },
+    {
+      "id": "p7",
+      "title": "Caching Proxy CLI",
+      "tags": ["Node.js", "Express", "Redis"],
+      "description": "A command-line interface that runs a server to intercept requests and save responses in cache ",
+      "image": "https://github.com/johnOfGod33/Caching-Proxy-CLI/raw/main/asset/cli%20example.png",
+      "githubUrl": "https://github.com/johnOfGod33/Caching-Proxy-CLI"
+    }
+  ],
+  "testimonialsSection": {
+    "kicker": "Client Reviews",
+    "title": "Trusted by people I've worked with"
+  },
+  "testimonials": [
+    {
+      "id": "t1",
+      "name": "TODO — Marketplace Client",
+      "role": "Client, Second-Hand Marketplace",
+      "quote": "TODO — Ask your client for a short review about working with you and the API you delivered."
+    },
+    {
+      "id": "t2",
+      "name": "TODO — Edomatch",
+      "role": "Team Member, Edomatch",
+      "quote": "TODO — Ask a colleague or manager at Edomatch for a short testimonial."
+    },
+    {
+      "id": "t3",
+      "name": "TODO — Business Manager Client",
+      "role": "Professor / Client, Business Manager",
+      "quote": "TODO — Ask your professor for a short written review of the stock management app."
+    }
+  ],
+  "servicesSection": {
+    "kicker": "Stack & Services",
+    "title": "How I build and how I help",
+    "viewAllLabel": "View all services"
+  },
+  "services": [
+    {
+      "id": "s1",
+      "title": "Frontend & Visibility",
+      "description": "A fast, beautiful interface your users will love — and that Google will rank.",
+      "points": [
+        "Clean, responsive design that works on any device",
+        "Fast loading pages that keep users engaged",
+        "SEO optimization to get found on Google",
+        "Smooth animations and intuitive user experience"
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Backend & Business Logic",
+      "description": "The engine behind your product — secure, reliable, and built to handle real traffic.",
+      "points": [
+        "User accounts, login, and access control",
+        "Online payments and transaction management",
+        "Your data, protected and always available",
+        "Automated workflows that save you time"
+      ],
+      "featured": true,
+      "badge": "Most requested"
+    },
+    {
+      "id": "s3",
+      "title": "Full Product, Start to Finish",
+      "description": "You have an idea. I build the whole thing — design, frontend, backend, launched.",
+      "points": [
+        "One person, one vision, zero back-and-forth",
+        "From wireframe to live product",
+        "Ongoing support after launch",
+        "Built to grow as your business grows"
+      ]
+    }
+  ],
+  "aboutSection": {
+    "kicker": "About",
+    "title": "Backend developer with an AI edge",
+    "readMoreLabel": "Read full profile",
+    "introColumns": [
+      "I'm Jean de Dieu, a backend developer based in Lomé, Togo. I specialize in building APIs and intelligent systems — from secure authentication to AI-powered matching engines. I'm also the co-founder of Kizo, an event platform I built from the ground up.",
+      "Currently pursuing a Master's in AI & Big Data, I bridge solid backend engineering with machine learning capabilities. My background in Mechanical Engineering gives me a problem-solving mindset that I apply to every system I build."
+    ],
+    "skillTags": [
+      "Python",
+      "FastAPI",
+      "Node.js",
+      "TypeScript",
+      "Next.js",
+      "React.js",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "Supabase",
+      "Stripe / Paystack",
+      "Docker",
+      "n8n",
+      "Vector DB",
+      "NLP"
+    ]
+  },
+  "career": [
+    {
+      "id": "c1",
+      "role": "Backend Developer (CDD)",
+      "company": "Edomatch",
+      "period": "Aug 2024 — Present",
+      "description": "Building and maintaining RESTful APIs with Python and FastAPI. Implementing authentication systems, payment integrations (Stripe, Paystack, Semoa), AI-powered matching with embeddings and vector databases, and notification systems with Novu."
+    },
+    {
+      "id": "c2",
+      "role": "Backend Developer Intern",
+      "company": "Edomatch",
+      "period": "Feb 2024 — Jul 2024",
+      "description": "Contributed to API development, database design, and security implementation. Participated in code reviews and improved development processes."
+    },
+    {
+      "id": "c3",
+      "role": "Frontend Developer",
+      "company": "Business Manager Project",
+      "period": "Jul 2024 — Sep 2024",
+      "description": "Built a stock management web app for a client using React.js. Developed interfaces for inventory tracking, order automation, and real-time reports."
+    },
+    {
+      "id": "c4",
+      "role": "Co-founder & Developer",
+      "company": "Kizo",
+      "period": "2025 — Present",
+      "description": "Co-founded and built Kizo, an event discovery platform. Designed and developed the full product using Next.js, Supabase, and MongoDB."
+    }
+  ],
+  "education": [
+    {
+      "id": "e1",
+      "school": "Collège de Paris Togo",
+      "degree": "Master in AI & Big Data",
+      "period": "2024 — Present",
+      "description": "Focused on machine learning, deep learning, NLP, and big data systems."
+    },
+    {
+      "id": "e2",
+      "school": "École Polytechnique de Lomé (EPL)",
+      "degree": "Bachelor in Mechanical Engineering",
+      "period": "2020 — 2024",
+      "description": "Built a strong analytical and problem-solving foundation applied to software engineering."
+    },
+    {
+      "id": "e3",
+      "school": "ESIG Global Success",
+      "degree": "MERN Stack Web Development",
+      "period": "Aug 2023 — Sep 2023",
+      "description": "Intensive training in full-stack web development with MongoDB, Express, React, and Node.js."
+    }
+  ],
+  "blogSection": {
+    "kicker": "Blog",
+    "title": "Thoughts and articles",
+    "viewAllLabel": "View all articles",
+    "source": "https://dev.to/johnofgod33"
+  },
+  "contactSection": {
+    "titleLine1": "Let's",
+    "titleLine2": "Connect.",
+    "intro": "Available for freelance projects and collaborations. I typically respond within 24 hours.",
+    "channels": [
+      {
+        "label": "Email",
+        "value": "sessoujeandedieu@gmail.com",
+        "href": "mailto:sessoujeandedieu@gmail.com"
+      },
+      {
+        "label": "WhatsApp",
+        "value": "+228 70486833",
+        "href": "https://wa.me/22870486833"
+      },
+      {
+        "label": "GitHub",
+        "value": "johnOfGod33",
+        "href": "https://github.com/johnOfGod33"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "jean-de-dieu-sessou",
+        "href": "https://linkedin.com/in/jean-de-dieu-sessou-260897292"
+      }
+    ],
+    "form": {
+      "kicker": "Project inquiry",
+      "title": "Tell me about your project",
+      "description": "Share your name and project details. I'll get back to you quickly.",
+      "submitLabel": "Send inquiry",
+      "successMessage": "Message received. I'll get back to you soon.",
+      "recipientEmail": "sessoujeandedieu@gmail.com"
+    },
+    "footerNote": "Message sent directly to sessoujeandedieu@gmail.com"
+  }
+}
