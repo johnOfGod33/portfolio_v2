@@ -71,38 +71,23 @@
   },
   "projects": [
     {
+      "id": "p2",
+      "title": "Kizo — Event Platform",
+      "description": "Co-founded and built a platform that helps people discover events, receive personalized reminders, and connect around shared experiences.",
+      "image": "/kizo.png",
+      "tags": ["Next.js", "Supabase", "MongoDB", "TypeScript"],
+      "liveUrl": "https://kizo.app",
+      "display": true
+    },
+    {
       "id": "p1",
       "title": "Password Generator",
       "description": "this website will generate a ramdom password. Depending on the chosen criteria we'll have a weak, medium, strong and very strong ",
       "tags": ["HTML", "CSS", "JavaScript"],
       "image": "https://github.com/johnOfGod33/password-generator/raw/main/assets/passwordGenerator.PNG",
       "liveUrl": "https://johnofgod33.github.io/password-generator/",
-      "githubUrl": "https://github.com/johnOfGod33/password-generator"
-    },
-    {
-      "id": "p4",
-      "title": "Second-Hand Marketplace API",
-      "description": "Full marketplace backend for buying and selling second-hand items — with user auth, product listings, search, and secure payment integration.",
-      "image": "https://avatars.githubusercontent.com/u/141136058?v=4",
-      "tags": ["Python", "FastAPI", "PostgreSQL", "Stripe"],
-      "liveUrl": "",
-      "githubUrl": ""
-    },
-    {
-      "id": "p2",
-      "title": "Kizo — Event Platform",
-      "description": "Co-founded and built a platform that helps people discover events, receive personalized reminders, and connect around shared experiences.",
-      "image": "https://avatars.githubusercontent.com/u/141136058?v=4",
-      "tags": ["Next.js", "Supabase", "MongoDB", "TypeScript"],
-      "liveUrl": "https://kizo.app"
-    },
-    {
-      "id": "p3",
-      "title": "Smart-Match — Job Matching",
-      "description": "AI-powered job matching platform that scores compatibility between job seekers and offers using NLP and embedding algorithms. The project that landed me at Edomatch.",
-      "image": "https://avatars.githubusercontent.com/u/141136058?v=4",
-      "tags": ["Python", "FastAPI", "NLP", "Vector DB"],
-      "githubUrl": "https://github.com/johnOfGod33/Smart-Match"
+      "githubUrl": "https://github.com/johnOfGod33/password-generator",
+      "display": true
     },
     {
       "id": "p5",
@@ -111,7 +96,27 @@
       "description": "A RESTful API that would power a personal blog.The client interface can be found",
       "image": "https://github.com/johnOfGod33/Personal-Blog-API/raw/main/assets/Personal%20blog%20api.png",
       "liveUrl": "https://personal-blog-api-7cge.onrender.com/api-docs/",
-      "githubUrl": "https://github.com/johnOfGod33/Personal-Blog-API"
+      "githubUrl": "https://github.com/johnOfGod33/Personal-Blog-API",
+      "display": true
+    },
+    {
+      "id": "p4",
+      "title": "Second-Hand Marketplace API",
+      "description": "Full marketplace backend for buying and selling second-hand items — with user auth, product listings, search, and secure payment integration.",
+      "image": "https://avatars.githubusercontent.com/u/141136058?v=4",
+      "tags": ["Python", "FastAPI", "PostgreSQL", "Stripe"],
+      "liveUrl": "",
+      "githubUrl": "",
+      "display": false
+    },
+    {
+      "id": "p3",
+      "title": "Smart-Match — Job Matching",
+      "description": "AI-powered job matching platform that scores compatibility between job seekers and offers using NLP and embedding algorithms. The project that landed me at Edomatch.",
+      "image": "https://avatars.githubusercontent.com/u/141136058?v=4",
+      "tags": ["Python", "FastAPI", "NLP", "Vector DB"],
+      "githubUrl": "https://github.com/johnOfGod33/Smart-Match",
+      "display": false
     },
     {
       "id": "p6",
@@ -119,7 +124,8 @@
       "tags": ["React.js", "Node.js", "Express", "MongoDB", "JWT"],
       "description": "A web application that allows users to create and manage blog posts ",
       "image": "https://github.com/johnOfGod33/admin-blog-panel/raw/main/src/assets/img/articles_homepage.png",
-      "githubUrl": "https://github.com/johnOfGod33/admin-blog-panel"
+      "githubUrl": "https://github.com/johnOfGod33/admin-blog-panel",
+      "display": true
     },
     {
       "id": "p7",
@@ -127,12 +133,13 @@
       "tags": ["Node.js", "Express", "Redis"],
       "description": "A command-line interface that runs a server to intercept requests and save responses in cache ",
       "image": "https://github.com/johnOfGod33/Caching-Proxy-CLI/raw/main/asset/cli%20example.png",
-      "githubUrl": "https://github.com/johnOfGod33/Caching-Proxy-CLI"
+      "githubUrl": "https://github.com/johnOfGod33/Caching-Proxy-CLI",
+      "display": true
     }
   ],
   "testimonialsSection": {
     "kicker": "Client Reviews",
-    "title": "Trusted by people I've worked with"
+    "title": "Trusted by people"
   },
   "testimonials": [
     {
@@ -155,8 +162,8 @@
     }
   ],
   "servicesSection": {
-    "kicker": "Stack & Services",
-    "title": "How I build and how I help",
+    "kicker": "Services",
+    "title": "What I can help you with",
     "viewAllLabel": "View all services"
   },
   "services": [
@@ -207,19 +214,26 @@
     "skillTags": [
       "Python",
       "FastAPI",
+      "Flask",
       "Node.js",
       "TypeScript",
       "Next.js",
-      "React.js",
       "MongoDB",
       "PostgreSQL",
       "Redis",
       "Supabase",
+      "Firebase",
       "Stripe / Paystack",
       "Docker",
-      "n8n",
+      "N8n",
       "Vector DB",
-      "NLP"
+      "NLP",
+      "AI",
+      "Machine Learning",
+      "Deep Learning",
+      "Data Analysis",
+      "Data Visualization",
+      "Data Engineering"
     ]
   },
   "career": [
@@ -255,9 +269,9 @@
   "education": [
     {
       "id": "e1",
-      "school": "Collège de Paris Togo",
+      "school": "ESGIS",
       "degree": "Master in AI & Big Data",
-      "period": "2024 — Present",
+      "period": "2025 — Present",
       "description": "Focused on machine learning, deep learning, NLP, and big data systems."
     },
     {

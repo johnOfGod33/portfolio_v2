@@ -18,15 +18,26 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  if (!project.display) return null;
   return (
     <Card className="group flex h-full flex-col overflow-hidden border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-sky-400 hover:shadow-lg hover:shadow-sky-100/40">
       <div className="relative aspect-4/3 w-full overflow-hidden border-b border-gray-200 bg-neutral-100">
         <Image
           src={project.image}
           alt=""
+          aria-hidden
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          quality={55}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="pointer-events-none scale-110 object-cover object-center blur-2xl"
+        />
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          quality={95}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="z-10 object-contain object-center transition-transform duration-500 ease-out group-hover:scale-[1.02]"
         />
       </div>
       <CardHeader className="gap-4 p-5">

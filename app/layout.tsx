@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk, Geist } from "next/font/google";
+import { Geist, Schibsted_Grotesk } from "next/font/google";
 
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { siteContent } from "@/lib/data/site-content";
 
-import "./globals.css";
 import { cn } from "@/lib/utils";
+import "./globals.css";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const schibsted = Schibsted_Grotesk({
   subsets: ["latin"],
@@ -33,8 +33,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "scroll-smooth", "antialiased", schibsted.variable, "font-sans", geist.variable)}
+      className={cn(
+        "h-full",
+        "scroll-smooth",
+        "antialiased",
+        schibsted.variable,
+        "font-sans",
+        geist.variable,
+      )}
     >
+      <head>
+        <link rel="icon" href="/me.jpg" />
+      </head>
       <body className="min-h-full bg-[#f7f7f7] font-sans text-[#0a0a0a]">
         <div className="flex min-h-full flex-col">
           <Navbar />

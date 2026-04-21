@@ -6,6 +6,7 @@ export type Project = {
   tags: string[];
   liveUrl: string;
   githubUrl: string;
+  display?: boolean;
 };
 
 export type BlogTag = {
