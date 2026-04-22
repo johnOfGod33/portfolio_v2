@@ -1,13 +1,19 @@
+"use client";
+
 import Link from "next/link";
 
+import { useLocale } from "@/components/providers/LocaleProvider";
 import { ServiceCard } from "@/components/cards/ServiceCard";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SectionReveal } from "@/components/ui/section-reveal";
-import { services, siteContent, skillTags } from "@/lib/data/site-content";
 import { Marquee } from "../ui/marquee";
 
 export function StackServices() {
+  const { siteContent } = useLocale();
+  const services = siteContent.services;
+  const skillTags = siteContent.aboutSection.skillTags;
+
   return (
     <section className="border-b border-gray-200 bg-white">
       <SectionReveal className="mx-auto max-w-384 px-4 py-14 sm:px-6 lg:px-10 lg:py-20">

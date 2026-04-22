@@ -3,6 +3,7 @@ import { Geist, Schibsted_Grotesk } from "next/font/google";
 
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+import { LocaleProvider } from "@/components/providers/LocaleProvider";
 import { siteContent } from "@/lib/data/site-content";
 
 import { cn } from "@/lib/utils";
@@ -41,16 +42,19 @@ export default function RootLayout({
         "font-sans",
         geist.variable,
       )}
+      data-scroll-behavior="smooth"
     >
       <head>
         <link rel="icon" href="/me.jpg" />
       </head>
       <body className="min-h-full bg-[#f7f7f7] font-sans text-[#0a0a0a]">
-        <div className="flex min-h-full flex-col">
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+        <LocaleProvider>
+          <div className="flex min-h-full flex-col">
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </LocaleProvider>
       </body>
     </html>
   );

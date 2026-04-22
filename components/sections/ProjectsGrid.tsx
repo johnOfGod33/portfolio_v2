@@ -1,10 +1,12 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+import { useLocale } from "@/components/providers/LocaleProvider";
 import { ProjectCard } from "@/components/cards/ProjectCard";
 import { Button } from "@/components/ui/button";
 import { SectionReveal } from "@/components/ui/section-reveal";
-import { projects, siteContent } from "@/lib/data/site-content";
 
 type ProjectsGridProps = {
   limit?: number;
@@ -12,6 +14,8 @@ type ProjectsGridProps = {
 };
 
 export function ProjectsGrid({ limit, showLoadMore }: ProjectsGridProps) {
+  const { siteContent } = useLocale();
+  const projects = siteContent.projects;
   const list = typeof limit === "number" ? projects.slice(0, limit) : projects;
 
   return (

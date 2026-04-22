@@ -1,11 +1,11 @@
+"use client";
+
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 
+import { useLocale } from "@/components/providers/LocaleProvider";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { aboutIntro, skillTags } from "@/lib/data/about";
-import { careerEntries } from "@/lib/data/career";
-import { educationEntries } from "@/lib/data/education";
 
 const social = [
   { href: "https://github.com", label: "GitHub", icon: Github },
@@ -14,20 +14,28 @@ const social = [
 ];
 
 export function About() {
+  const { locale, siteContent } = useLocale();
+  const aboutIntro = siteContent.aboutSection.introColumns;
+  const skillTags = siteContent.aboutSection.skillTags;
+  const careerEntries = siteContent.career;
+  const educationEntries = siteContent.education;
+
   return (
     <section className="border-b border-gray-200 bg-[#f7f7f7]">
-      <div className="mx-auto max-w-[96rem] px-4 py-8 sm:px-6 lg:h-[calc(100dvh-72px)] lg:px-10 lg:py-6">
+      <div className="mx-auto max-w-384 px-4 py-8 sm:px-6 lg:h-[calc(100dvh-72px)] lg:px-10 lg:py-6">
         <p className="text-xs font-black tracking-[0.35em] text-sky-500">
-          About
+          {siteContent.aboutSection.kicker}
         </p>
         <h1 className="mt-2 text-3xl font-black uppercase  text-[#0a0a0a] sm:text-4xl lg:text-5xl">
-          Editorial code. Reliable systems.
+          {locale === "fr"
+            ? "Ingenierie solide. Produits utiles."
+            : "Editorial code. Reliable systems."}
         </h1>
         <div className="mt-5 grid gap-6 lg:h-[calc(100%-96px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-7">
           <div className="space-y-6 lg:overflow-y-auto lg:pr-2">
             <div>
               <h2 className="text-lg font-black tracking-wide text-[#0a0a0a]">
-                Career timeline
+                {locale === "fr" ? "Parcours professionnel" : "Career timeline"}
               </h2>
               <ol className="mt-3 space-y-4 border-l-2 border-gray-200 pl-4">
                 {careerEntries.map((entry) => (
@@ -51,7 +59,7 @@ export function About() {
             </div>
             <div>
               <h2 className="text-lg font-black tracking-wide text-[#0a0a0a]">
-                Education timeline
+                {locale === "fr" ? "Parcours academique" : "Education timeline"}
               </h2>
               <ol className="mt-3 space-y-4 border-l-2 border-gray-200 pl-4">
                 {educationEntries.map((entry) => (
@@ -76,7 +84,7 @@ export function About() {
           </div>
           <div className="space-y-5 border border-gray-200 bg-white p-5 sm:p-6 lg:overflow-y-auto">
             <div className="space-y-3">
-              {aboutIntro.columns.map((paragraph, index) => (
+              {aboutIntro.map((paragraph, index) => (
                 <p
                   key={index}
                   className="text-sm font-medium leading-relaxed text-gray-600 sm:text-base"
@@ -87,7 +95,7 @@ export function About() {
             </div>
             <div>
               <h2 className="text-lg font-black tracking-wide text-[#0a0a0a]">
-                Skills & tools
+                {locale === "fr" ? "Competences & outils" : "Skills & tools"}
               </h2>
               <div className="mt-3 flex flex-wrap gap-2">
                 {skillTags.map((skill) => (
@@ -116,7 +124,9 @@ export function About() {
                 className="rounded-none px-6 text-sm font-black tracking-wide"
                 asChild
               >
-                <Link href="/contact">Contact me</Link>
+                <Link href="/contact">
+                  {locale === "fr" ? "Me contacter" : "Contact me"}
+                </Link>
               </Button>
             </div>
           </div>

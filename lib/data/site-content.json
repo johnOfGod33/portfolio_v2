@@ -4,9 +4,42 @@
     "role": "Backend Developer",
     "copyright": "© 2026 Jean de Dieu Sessou. All rights reserved.",
     "metadata": {
-      "defaultTitle": "Jean de Dieu Sessou — Backend Developer",
+      "defaultTitle": "Jean de Dieu Sessou — Fullstack Developer",
       "titleTemplate": "%s — Jean de Dieu Sessou",
-      "description": "Portfolio of Jean de Dieu Sessou — backend developer building intelligent APIs, matching systems, and reliable products."
+      "description": "Jean de Dieu Sessou is a freelance fullstack developer helping startups and founders build web apps from idea to launch — frontend, backend, and AI-powered features.",
+      "keywords": [
+        "fullstack developer",
+        "freelance fullstack developer",
+        "hire fullstack developer",
+        "web app development for startups",
+        "backend developer Togo",
+        "fullstack developer West Africa",
+        "fullstack developer Togo",
+        "développeur fullstack Togo",
+        "développeur web Togo",
+        "freelance développeur Lomé",
+        "créer application web Togo",
+        "développeur startup Togo",
+        "FastAPI developer",
+        "Next.js developer",
+        "AI powered web app",
+        "startup developer freelance",
+        "Jean de Dieu Sessou"
+      ],
+      "openGraph": {
+        "title": "Jean de Dieu Sessou — Fullstack Developer for Startups",
+        "description": "I help founders turn ideas into live products — frontend, backend, payments, and AI features. Available for freelance.",
+        "url": "https://jeandedieu.dev",
+        "image": "https://jeandedieu.dev/og-image.png",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Jean de Dieu Sessou — Fullstack Developer for Startups",
+        "description": "I help founders turn ideas into live products — frontend, backend, payments, and AI features. Available for freelance.",
+        "image": "https://jeandedieu.dev/og-image.png",
+        "handle": "@jeandedieudev"
+      }
     }
   },
   "navigation": {
@@ -65,7 +98,7 @@
   },
   "projectsSection": {
     "kicker": "Projects",
-    "title": "Selected work",
+    "title": "Things I've built",
     "viewAllLabel": "View all projects",
     "loadMoreLabel": "Load more projects"
   },
@@ -167,7 +200,7 @@
   ],
   "servicesSection": {
     "kicker": "Services",
-    "title": "What I can help you with",
+    "title": "How I can help",
     "viewAllLabel": "View all services"
   },
   "services": [
@@ -209,7 +242,7 @@
   ],
   "aboutSection": {
     "kicker": "About",
-    "title": "Backend developer with an AI edge",
+    "title": "Who I am",
     "readMoreLabel": "Read full profile",
     "introColumns": [
       "I'm Jean de Dieu, a backend developer based in Lomé, Togo. I specialize in building APIs and intelligent systems — from secure authentication to AI-powered matching engines. I'm also the co-founder of Kizo, an event platform I built from the ground up.",
@@ -261,13 +294,6 @@
       "company": "Business Manager Project",
       "period": "Jul 2024 — Sep 2024",
       "description": "Built a stock management web app for a client using React.js. Developed interfaces for inventory tracking, order automation, and real-time reports."
-    },
-    {
-      "id": "c4",
-      "role": "Co-founder & Developer",
-      "company": "Kizo",
-      "period": "2025 — Present",
-      "description": "Co-founded and built Kizo, an event discovery platform. Designed and developed the full product using Next.js, Supabase, and MongoDB."
     }
   ],
   "education": [
@@ -295,13 +321,13 @@
   ],
   "blogSection": {
     "kicker": "Blog",
-    "title": "Thoughts and articles",
+    "title": "What I think",
     "viewAllLabel": "View all articles",
     "source": "https://dev.to/johnofgod33"
   },
   "contactSection": {
     "titleLine1": "Let's",
-    "titleLine2": "Connect.",
+    "titleLine2": "Connect",
     "intro": "Available for freelance projects and collaborations. I typically respond within 24 hours.",
     "channels": [
       {

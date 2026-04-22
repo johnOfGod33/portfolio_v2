@@ -1,0 +1,156 @@
+{
+  "site": {
+    "role": "Developpeur Fullstack",
+    "metadata": {
+      "defaultTitle": "Jean de Dieu Sessou — Developpeur Fullstack",
+      "description": "Jean de Dieu Sessou accompagne les startups et les fondateurs pour transformer une idee en produit web solide, du frontend au backend avec des fonctions IA utiles.",
+      "openGraph": {
+        "title": "Jean de Dieu Sessou — Developpeur Fullstack pour startups",
+        "description": "Je transforme vos idees en produits en ligne: interface, backend, paiements et IA. Disponible en freelance."
+      },
+      "twitter": {
+        "title": "Jean de Dieu Sessou — Developpeur Fullstack pour startups",
+        "description": "Je transforme vos idees en produits en ligne: interface, backend, paiements et IA. Disponible en freelance."
+      }
+    }
+  },
+  "navigation": {
+    "links": [
+      { "href": "/", "label": "Accueil" },
+      { "href": "/about", "label": "A propos" },
+      { "href": "/projects", "label": "Projets" },
+      { "href": "/blog", "label": "Blog" },
+      { "href": "/services", "label": "Services" },
+      { "href": "/contact", "label": "Contact" }
+    ]
+  },
+  "hero": {
+    "availabilityBadge": "Disponible en freelance",
+    "title": "Developpeur fullstack.",
+    "intro": "Je cree des applications web intelligentes et fiables qui repondent a des besoins metier concrets.",
+    "highlights": [
+      "De l'idee au produit en ligne, je gere frontend, backend et mise en production.",
+      "Une base solide pour evoluer de vos premiers utilisateurs a une vraie phase de croissance.",
+      "Un produit securise, rapide et pret a monter en charge des le debut."
+    ],
+    "primaryCta": {
+      "label": "Parlons-en"
+    },
+    "secondaryCta": {
+      "label": "CV"
+    }
+  },
+  "projectsSection": {
+    "kicker": "Projets",
+    "title": "Ce que j'ai construit",
+    "viewAllLabel": "Voir tous les projets",
+    "loadMoreLabel": "Voir plus de projets"
+  },
+  "testimonialsSection": {
+    "kicker": "Avis clients",
+    "title": "Ils m'ont fait confiance"
+  },
+  "servicesSection": {
+    "kicker": "Services",
+    "title": "Comment je peux aider",
+    "viewAllLabel": "Voir tous les services"
+  },
+  "services": [
+    {
+      "id": "s1",
+      "title": "Frontend et business en ligne",
+      "description": "Une interface rapide et claire que vos utilisateurs aiment, avec une base SEO propre.",
+      "points": [
+        "Design responsive adapte mobile, tablette et desktop",
+        "Pages optimises pour des temps de chargement rapides",
+        "Fondations SEO solides pour etre visible sur Google",
+        "Parcours utilisateur fluide avec interactions utiles"
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Backend & logique metier",
+      "description": "Le coeur du produit: securise, stable et pense pour de vraies charges.",
+      "points": [
+        "Authentification, comptes utilisateurs et permissions",
+        "Paiements en ligne et gestion des transactions",
+        "Donnees protegees et architecture fiable",
+        "Automatisations pour accelerer vos operations"
+      ],
+      "featured": true,
+      "badge": "Le plus demande"
+    },
+    {
+      "id": "s3",
+      "title": "Produit complet de A a Z",
+      "description": "Vous apportez la vision, je livre un produit complet et exploitable.",
+      "points": [
+        "Un interlocuteur unique de la conception au lancement",
+        "Du cadrage produit a la mise en ligne",
+        "Accompagnement apres lancement",
+        "Architecture qui suit la croissance de votre activite"
+      ]
+    }
+  ],
+  "aboutSection": {
+    "kicker": "A propos",
+    "title": "Qui je suis",
+    "readMoreLabel": "Voir le profil complet",
+    "introColumns": [
+      "Je suis Jean de Dieu, developpeur fullstack base a Lome. Je construis des applications web de bout en bout, avec une expertise forte sur les APIs, la logique metier et les briques IA utiles au produit.",
+      "Actuellement en Master IA & Big Data, je combine rigueur d'ingenierie logicielle et capacites en machine learning pour livrer des produits performants et evolutifs."
+    ]
+  },
+  "career": [
+    {
+      "id": "c1",
+      "role": "Developpeur Backend (CDD)",
+      "description": "Conception et maintenance d'APIs REST avec Python et FastAPI. Mise en place de l'authentification, des paiements (Stripe, Paystack, Semoa), du matching IA via embeddings et base vectorielle, et des notifications avec Novu."
+    },
+    {
+      "id": "c2",
+      "role": "Stagiaire Developpeur Backend",
+      "description": "Participation au developpement d'APIs, a la modelisation des donnees et au renforcement de la securite. Contribution aux revues de code et a l'amelioration des pratiques d'equipe."
+    },
+    {
+      "id": "c3",
+      "role": "Developpeur Frontend",
+      "description": "Realisation d'une application de gestion de stock en React.js pour un client, avec suivi des inventaires, automatisation des commandes et rapports en temps reel."
+    }
+  ],
+  "education": [
+    {
+      "id": "e1",
+      "degree": "Master IA & Big Data",
+      "description": "Specialisation en machine learning, deep learning, NLP et systemes big data."
+    },
+    {
+      "id": "e2",
+      "degree": "Licence en Genie Mecanique",
+      "description": "Base analytique et methodique forte, appliquee aujourd'hui a l'ingenierie logicielle."
+    },
+    {
+      "id": "e3",
+      "degree": "Developpement web MERN Stack",
+      "description": "Formation intensive fullstack avec MongoDB, Express, React et Node.js."
+    }
+  ],
+  "blogSection": {
+    "kicker": "Blog",
+    "title": "Ce que je partage",
+    "viewAllLabel": "Voir tous les articles"
+  },
+  "contactSection": {
+    "titleLine1": "Parlons",
+    "titleLine2": "projet",
+    "intro": "Disponible pour des missions freelance et des collaborations produit. Je reponds en general sous 24h.",
+    "form": {
+      "kicker": "Demande de projet",
+      "title": "Parlez-moi de votre projet",
+      "description": "Partagez votre nom et les grandes lignes du besoin. Je vous reviens rapidement.",
+      "submitLabel": "Envoyer la demande",
+      "successMessage": "Message bien recu. Je reviens vers vous rapidement."
+    },
+    "footerNote": "Message envoye directement a sessoujeandedieu@gmail.com"
+  }
+}

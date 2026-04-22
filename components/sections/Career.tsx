@@ -1,21 +1,28 @@
-import { careerEntries } from "@/lib/data/career";
+"use client";
+
+import { useLocale } from "@/components/providers/LocaleProvider";
+import type { CareerEntry } from "@/lib/types";
 
 export function Career() {
+  const { locale, siteContent } = useLocale();
+  const careerEntries = siteContent.career as CareerEntry[];
+
   return (
     <section className="border-b border-gray-200 bg-white">
-      <div className="mx-auto max-w-[96rem] px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
+      <div className="mx-auto max-w-384 px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-xs font-black tracking-[0.35em] text-sky-500">
-              Career
+              {locale === "fr" ? "Parcours" : "Career"}
             </p>
             <h2 className="mt-2 text-3xl font-black uppercase  text-[#0a0a0a] sm:text-4xl lg:text-5xl">
-              Where I shipped
+              {locale === "fr" ? "Ou je suis passe" : "Where I've been"}
             </h2>
           </div>
           <p className="max-w-2xl text-base text-gray-600">
-            A horizontal slice of recent roles — each stop sharpened product
-            sense and platform discipline.
+            {locale === "fr"
+              ? "Un apercu de mes experiences recentes, chacune a renforce ma vision produit et la rigueur technique."
+              : "A horizontal slice of recent roles — each stop sharpened product sense and platform discipline."}
           </p>
         </div>
         <div className="mt-10 overflow-x-auto pb-2">

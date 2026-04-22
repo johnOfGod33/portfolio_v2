@@ -3,8 +3,8 @@
 import { FormEvent, useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 
+import { useLocale } from "@/components/providers/LocaleProvider";
 import { Button } from "@/components/ui/button";
-import { siteContent } from "@/lib/data/site-content";
 
 type FormState = {
   firstName: string;
@@ -19,6 +19,7 @@ const initialState: FormState = {
 };
 
 export function ProjectInquiryForm() {
+  const { locale, siteContent } = useLocale();
   const [formState, setFormState] = useState<FormState>(initialState);
   const [message, setMessage] = useState<string | null>(null);
 
@@ -27,10 +28,14 @@ export function ProjectInquiryForm() {
     setMessage(null);
 
     const subject = encodeURIComponent(
-      `Nouvelle demande: ${formState.firstName} ${formState.lastName}`,
+      locale === "fr"
+        ? `Nouvelle demande: ${formState.firstName} ${formState.lastName}`
+        : `New inquiry: ${formState.firstName} ${formState.lastName}`,
     );
     const body = encodeURIComponent(
-      `Nom: ${formState.firstName}\nPrenom: ${formState.lastName}\n\nDetails du projet:\n${formState.projectDetails}`,
+      locale === "fr"
+        ? `Nom: ${formState.firstName}\nPrenom: ${formState.lastName}\n\nDetails du projet:\n${formState.projectDetails}`
+        : `First name: ${formState.firstName}\nLast name: ${formState.lastName}\n\nProject details:\n${formState.projectDetails}`,
     );
     window.location.href = `mailto:${siteContent.contactSection.form.recipientEmail}?subject=${subject}&body=${body}`;
 
@@ -56,7 +61,7 @@ export function ProjectInquiryForm() {
         <div className="grid gap-6 sm:grid-cols-2">
           <label className="block space-y-2">
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500">
-              Nom
+              {locale === "fr" ? "Nom" : "First name"}
             </span>
             <input
               required
@@ -70,7 +75,7 @@ export function ProjectInquiryForm() {
           </label>
           <label className="block space-y-2">
             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500">
-              Prenom
+              {locale === "fr" ? "Prenom" : "Last name"}
             </span>
             <input
               required
@@ -86,7 +91,7 @@ export function ProjectInquiryForm() {
 
         <label className="block space-y-2">
           <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500">
-            Details du projet
+            {locale === "fr" ? "Details du projet" : "Project details"}
           </span>
           <textarea
             required

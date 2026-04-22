@@ -1,10 +1,15 @@
+"use client";
+
 import Link from "next/link";
 
+import { useLocale } from "@/components/providers/LocaleProvider";
 import { Button } from "@/components/ui/button";
 import { SectionReveal } from "@/components/ui/section-reveal";
-import { aboutIntro, siteContent } from "@/lib/data/site-content";
 
 export function AboutPreview() {
+  const { siteContent } = useLocale();
+  const aboutIntro = siteContent.aboutSection.introColumns;
+
   return (
     <section className="border-b border-gray-200 bg-[#f7f7f7]">
       <SectionReveal className="mx-auto max-w-384 px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
@@ -15,7 +20,7 @@ export function AboutPreview() {
           {siteContent.aboutSection.title}
         </h2>
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
-          {aboutIntro.columns.map((paragraph, index) => (
+          {aboutIntro.map((paragraph, index) => (
             <p
               key={index}
               className="text-base leading-relaxed text-gray-600 sm:text-lg"

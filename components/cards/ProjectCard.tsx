@@ -26,8 +26,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
           src={project.image}
           alt=""
           aria-hidden
+          loading="eager"
           fill
-          quality={55}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="pointer-events-none scale-110 object-cover object-center blur-2xl"
         />
@@ -35,7 +35,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           src={project.image}
           alt={project.title}
           fill
-          quality={95}
+          loading="eager"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="z-10 object-contain object-center transition-transform duration-500 ease-out group-hover:scale-[1.02]"
         />

@@ -1,9 +1,11 @@
+"use client";
+
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 
 import { ProjectInquiryForm } from "@/components/forms/ProjectInquiryForm";
+import { useLocale } from "@/components/providers/LocaleProvider";
 import { SectionReveal } from "@/components/ui/section-reveal";
-import { siteContent } from "@/lib/data/site-content";
 
 const iconByChannel = {
   Email: Mail,
@@ -12,6 +14,8 @@ const iconByChannel = {
 } as const;
 
 export function ContactSection() {
+  const { siteContent } = useLocale();
+
   return (
     <section className="border-y border-gray-200 bg-[#f7f7f7]">
       <SectionReveal className="mx-auto grid max-w-384 gap-12 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10 lg:py-20">

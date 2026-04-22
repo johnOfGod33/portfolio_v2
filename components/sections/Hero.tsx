@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ArrowRight,
   Check,
@@ -10,9 +12,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+import { useLocale } from "@/components/providers/LocaleProvider";
 import { ParallaxY } from "@/components/ui/parallax-y";
 import { TypingAnimation } from "@/components/ui/typing-animation";
-import { heroTyping, siteContent } from "@/lib/data/site-content";
+import { heroTyping } from "@/lib/data/site-content";
 
 const socialIconMap = {
   GitHub: Github,
@@ -21,6 +24,8 @@ const socialIconMap = {
 } as const;
 
 export function Hero() {
+  const { siteContent } = useLocale();
+
   return (
     <section className="border-b border-gray-200 bg-[#f7f7f7]">
       <div className="mx-auto grid max-w-384 gap-10 px-4 py-10 sm:px-6 lg:min-h-[calc(100dvh-72px)] lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-10 lg:py-8">

@@ -1,9 +1,15 @@
+"use client";
+
+import { useLocale } from "@/components/providers/LocaleProvider";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Marquee } from "@/components/ui/marquee";
 import { SectionReveal } from "@/components/ui/section-reveal";
-import { siteContent, testimonials } from "@/lib/data/site-content";
+import type { Testimonial } from "@/lib/types";
 
 export function FeaturedTestimonials() {
+  const { siteContent } = useLocale();
+  const testimonials = siteContent.testimonials as Testimonial[];
+
   return (
     <section className="border-b border-gray-200 bg-[#f7f7f7]">
       <SectionReveal className="mx-auto max-w-384 px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
