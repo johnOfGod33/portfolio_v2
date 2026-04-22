@@ -54,14 +54,14 @@ export default buildConfig({
             collections: {
               media: true,
             },
-            bucket: process.env.R2_BUCKET as string,
+            bucket: process.env.R2_BUCKET || "",
             config: {
-              endpoint: process.env.R2_ENDPOINT as string,
+              endpoint: process.env.R2_ENDPOINT || "",
               region: "auto",
               forcePathStyle: true,
               credentials: {
-                accessKeyId: process.env.R2_ACCESS_KEY_ID as string,
-                secretAccessKey: process.env.R2_SECRET_ACCESS_KEY as string,
+                accessKeyId: process.env.R2_ACCESS_KEY_ID || "",
+                secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || "",
               },
             },
           }),

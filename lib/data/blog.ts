@@ -69,9 +69,9 @@ function toBlogPost(post: PayloadPost): BlogPost {
 
 export async function getBlogPosts(limit?: number): Promise<BlogPost[]> {
   try {
-    const payload = await getPayload({ config });
+    const payload = (await getPayload({ config })) as any;
     const result = await payload.find({
-      collection: "posts",
+      collection: "posts" as any,
       where: {
         _status: {
           equals: "published",
