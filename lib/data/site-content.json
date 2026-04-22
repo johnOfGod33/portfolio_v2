@@ -76,7 +76,7 @@
       "description": "Co-founded and built a platform that helps people discover events, receive personalized reminders, and connect around shared experiences.",
       "image": "/kizo.png",
       "tags": ["Next.js", "Supabase", "MongoDB", "TypeScript"],
-      "liveUrl": "https://kizo.app",
+      "liveUrl": "https://kizoapp.com",
       "display": true
     },
     {
