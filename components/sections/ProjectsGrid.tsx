@@ -3,8 +3,8 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-import { useLocale } from "@/components/providers/LocaleProvider";
 import { ProjectCard } from "@/components/cards/ProjectCard";
+import { useLocale } from "@/components/providers/LocaleProvider";
 import { Button } from "@/components/ui/button";
 import { SectionReveal } from "@/components/ui/section-reveal";
 
@@ -19,7 +19,7 @@ export function ProjectsGrid({ limit, showLoadMore }: ProjectsGridProps) {
   const list = typeof limit === "number" ? projects.slice(0, limit) : projects;
 
   return (
-    <section className="border-b border-gray-200 bg-white">
+    <section className="border-b border-gray-200 bg-[#f7f7f7]">
       <SectionReveal className="mx-auto max-w-384 px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
