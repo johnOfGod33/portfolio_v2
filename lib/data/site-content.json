@@ -144,21 +144,15 @@
   "testimonials": [
     {
       "id": "t1",
-      "name": "TODO — Marketplace Client",
-      "role": "Client, Second-Hand Marketplace",
-      "quote": "TODO — Ask your client for a short review about working with you and the API you delivered."
+      "name": "Claude SODOKIN",
+      "role": "Civil Engineer",
+      "quote": "Jean De Dieu m’a accompagné dans la création de mon site web avec beaucoup de professionnalisme et d’écoute. Son travail a été d’une grande qualité, alliant créativité, rigueur et respect des délais. Grâce à son expertise, j’ai aujourd’hui une plateforme qui valorise efficacement mon profil, et je le recommande vivement."
     },
     {
       "id": "t2",
-      "name": "TODO — Edomatch",
-      "role": "Team Member, Edomatch",
-      "quote": "TODO — Ask a colleague or manager at Edomatch for a short testimonial."
-    },
-    {
-      "id": "t3",
-      "name": "TODO — Business Manager Client",
-      "role": "Professor / Client, Business Manager",
-      "quote": "TODO — Ask your professor for a short written review of the stock management app."
+      "name": "Josué DJOSSOU",
+      "role": "Senior Mobile Engineer",
+      "quote": "I highly recommend Jean to any team looking for a backend engineer who combines technical excellence with professionalism and a strong sense of responsibility."
     }
   ],
   "servicesSection": {
