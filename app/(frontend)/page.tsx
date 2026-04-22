@@ -6,7 +6,7 @@ import { LatestBlog } from "@/components/sections/LatestBlog";
 import { ProjectsGrid } from "@/components/sections/ProjectsGrid";
 import { StackServices } from "@/components/sections/StackServices";
 
-export default function HomePage() {
+export default async function HomePage() {
   return (
     <>
       <Hero />

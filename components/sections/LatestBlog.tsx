@@ -2,14 +2,14 @@ import Link from "next/link";
 
 import { BlogCard } from "@/components/cards/BlogCard";
 import { SectionReveal } from "@/components/ui/section-reveal";
-import { blogPosts } from "@/lib/data/blog";
+import { getBlogPosts } from "@/lib/data/blog";
 
 type LatestBlogProps = {
   limit?: number;
 };
 
-export function LatestBlog({ limit = 3 }: LatestBlogProps) {
-  const posts = blogPosts.slice(0, limit);
+export async function LatestBlog({ limit = 3 }: LatestBlogProps) {
+  const posts = await getBlogPosts(limit);
 
   return (
     <section className="border-b border-gray-200 bg-white">
