@@ -3,6 +3,7 @@ import type { BlogPost } from "@/lib/types";
 export const blogPosts: BlogPost[] = [
   {
     id: "b1",
+    href: "https://www.v1.jeandedieu.dev/blog/why-you-should-learn-docker",
     title: "What is docker and why every developer should learn it",
     excerpt:
       "Docker is a platform that allows you to deploy applications in an isolated environment called a container. A container encapsulates the code, configurations, and all dependencies required for the application to run.",

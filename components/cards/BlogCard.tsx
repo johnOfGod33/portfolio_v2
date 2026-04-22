@@ -19,7 +19,11 @@ function formatDate(iso: string) {
 
 export function BlogCard({ post }: BlogCardProps) {
   return (
-    <Link href={`/blog#${post.id}`} className="block">
+    <Link
+      href={post.href ? post.href : `/blog`}
+      target="_blank"
+      className="block"
+    >
       <Card className="group overflow-hidden p-0 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-400 hover:shadow-lg hover:shadow-sky-100/30">
         <article className="grid grid-cols-[160px_1fr] items-center gap-5 p-4 sm:grid-cols-[280px_1fr] sm:gap-8 sm:p-6">
           <div className="relative aspect-video w-full overflow-hidden border border-gray-200 bg-neutral-100">

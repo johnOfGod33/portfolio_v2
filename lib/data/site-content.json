@@ -135,6 +135,16 @@
       "image": "https://github.com/johnOfGod33/Caching-Proxy-CLI/raw/main/asset/cli%20example.png",
       "githubUrl": "https://github.com/johnOfGod33/Caching-Proxy-CLI",
       "display": true
+    },
+    {
+      "id": "p8",
+      "title": "portfolio v1",
+      "tags": ["Next.js", "Tailwind CSS", "TypeScript"],
+      "description": "this is the first version of my portfolio, it was built with Next.js, Tailwind CSS, and TypeScript.",
+      "image": "https://github.com/johnOfGod33/Portfolio/raw/main/public/Portfolio.png",
+      "liveUrl": "https://v1.jeandedieu.dev",
+      "githubUrl": "https://github.com/johnOfGod33/Portfolio",
+      "display": true
     }
   ],
   "testimonialsSection": {

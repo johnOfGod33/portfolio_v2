@@ -19,6 +19,7 @@ export type BlogPost = {
   title: string;
   excerpt: string;
   coverImage: string;
+  href?: string;
   tags: BlogTag[];
   author: {
     name: string;
