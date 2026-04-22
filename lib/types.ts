@@ -4,8 +4,8 @@ export type Project = {
   description: string;
   image: string;
   tags: string[];
-  liveUrl: string;
-  githubUrl: string;
+  liveUrl?: string;
+  githubUrl?: string;
   display?: boolean;
 };
 
