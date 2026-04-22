@@ -18,10 +18,14 @@ function formatDate(iso: string) {
 }
 
 export function BlogCard({ post }: BlogCardProps) {
+  const href = post.href ?? (post.slug ? `/blog/${post.slug}` : "/blog");
+  const isExternal = href.startsWith("http");
+
   return (
     <Link
-      href={post.href ? post.href : `/blog`}
-      target="_blank"
+      href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noreferrer" : undefined}
       className="block"
     >
       <Card className="group overflow-hidden p-0 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-400 hover:shadow-lg hover:shadow-sky-100/30">

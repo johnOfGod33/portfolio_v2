@@ -1,15 +1,37 @@
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
-import { resendAdapter } from "@payloadcms/email-resend";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
+import { s3Storage } from "@payloadcms/storage-s3";
 import { buildConfig } from "payload";
+import path from "path";
 import sharp from "sharp";
+import { fileURLToPath } from "url";
+
+import { Media } from "./collections/Media";
+import { Posts } from "./collections/Posts";
+import { Users } from "./collections/Users";
+
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+const isProduction = process.env.NODE_ENV === "production";
+const hasR2Config = Boolean(
+  process.env.R2_BUCKET &&
+    process.env.R2_ACCESS_KEY_ID &&
+    process.env.R2_SECRET_ACCESS_KEY &&
+    process.env.R2_ENDPOINT,
+);
 
 export default buildConfig({
+  admin: {
+    user: Users.slug,
+    importMap: {
+      baseDir: path.resolve(dirname),
+    },
+  },
   // If you'd like to use Rich Text, pass your editor here
   editor: lexicalEditor(),
 
   // Define and configure your collections in this array
-  collections: [],
+  collections: [Users, Media, Posts],
 
   // Your Payload secret - should be a complex and secure string, unguessable
   secret: process.env.PAYLOAD_SECRET || "",
@@ -22,10 +44,28 @@ export default buildConfig({
   // make sure to install it and pass it to the config.
   // This is optional - if you don't need to do these things,
   // you don't need it!
-  email: resendAdapter({
-    defaultFromAddress: "noreply@example.com",
-    defaultFromName: "My App",
-    apiKey: process.env.RESEND_API_KEY || "",
-  }),
+  typescript: {
+    outputFile: path.resolve(dirname, "payload-types.ts"),
+  },
+  plugins:
+    isProduction && hasR2Config
+      ? [
+          s3Storage({
+            collections: {
+              media: true,
+            },
+            bucket: process.env.R2_BUCKET as string,
+            config: {
+              endpoint: process.env.R2_ENDPOINT as string,
+              region: "auto",
+              forcePathStyle: true,
+              credentials: {
+                accessKeyId: process.env.R2_ACCESS_KEY_ID as string,
+                secretAccessKey: process.env.R2_SECRET_ACCESS_KEY as string,
+              },
+            },
+          }),
+        ]
+      : [],
   sharp,
 });

@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 
-import { BlogCard } from "@/components/cards/BlogCard";
-import { blogPosts } from "@/lib/data/blog";
+import { BlogExplorer } from "@/components/sections/BlogExplorer";
+import { getBlogPosts } from "@/lib/data/blog";
 
 export const metadata: Metadata = {
   title: "Blog",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getBlogPosts();
+
   return (
     <section className="bg-[#f7f7f7]">
-      <div className="mx-auto max-w-[96rem] px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
+      <div className="mx-auto max-w-384 px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
         <p className="text-xs font-black tracking-[0.35em] text-sky-500">
           Blog
         </p>
@@ -21,13 +23,7 @@ export default function BlogPage() {
           Long-form writing on the tools and tradeoffs behind modern web
           products.
         </p>
-        <div className="mt-12 space-y-4">
-          {blogPosts.map((post) => (
-            <div key={post.id} id={post.id}>
-              <BlogCard post={post} />
-            </div>
-          ))}
-        </div>
+        <BlogExplorer posts={posts} />
       </div>
     </section>
   );

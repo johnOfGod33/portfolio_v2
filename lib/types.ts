@@ -5,7 +5,7 @@ export type Project = {
   image: string;
   tags: string[];
   liveUrl: string;
-  githubUrl: string;
+  githubUrl?: string;
   display?: boolean;
 };
 
@@ -19,6 +19,7 @@ export type BlogPost = {
   title: string;
   excerpt: string;
   coverImage: string;
+  slug?: string;
   href?: string;
   tags: BlogTag[];
   author: {
