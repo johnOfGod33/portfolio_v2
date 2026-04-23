@@ -1,8 +1,8 @@
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { s3Storage } from "@payloadcms/storage-s3";
-import { buildConfig } from "payload";
 import path from "path";
+import { buildConfig } from "payload";
 import sharp from "sharp";
 import { fileURLToPath } from "url";
 
@@ -15,9 +15,9 @@ const dirname = path.dirname(filename);
 const isProduction = process.env.NODE_ENV === "production";
 const hasR2Config = Boolean(
   process.env.R2_BUCKET &&
-    process.env.R2_ACCESS_KEY_ID &&
-    process.env.R2_SECRET_ACCESS_KEY &&
-    process.env.R2_ENDPOINT,
+  process.env.R2_ACCESS_KEY_ID &&
+  process.env.R2_SECRET_ACCESS_KEY &&
+  process.env.R2_ENDPOINT,
 );
 
 export default buildConfig({
@@ -47,25 +47,22 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
-  plugins:
-    isProduction && hasR2Config
-      ? [
-          s3Storage({
-            collections: {
-              media: true,
-            },
-            bucket: process.env.R2_BUCKET || "",
-            config: {
-              endpoint: process.env.R2_ENDPOINT || "",
-              region: "auto",
-              forcePathStyle: true,
-              credentials: {
-                accessKeyId: process.env.R2_ACCESS_KEY_ID || "",
-                secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || "",
-              },
-            },
-          }),
-        ]
-      : [],
+  plugins: [
+    s3Storage({
+      collections: {
+        media: true,
+      },
+      bucket: process.env.R2_BUCKET || "",
+      config: {
+        endpoint: process.env.R2_ENDPOINT || "",
+        region: "auto",
+        forcePathStyle: true,
+        credentials: {
+          accessKeyId: process.env.R2_ACCESS_KEY_ID || "",
+          secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || "",
+        },
+      },
+    }),
+  ],
   sharp,
 });
