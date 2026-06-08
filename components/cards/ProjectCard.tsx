@@ -20,8 +20,8 @@ type ProjectCardProps = {
 export function ProjectCard({ project }: ProjectCardProps) {
   if (!project.display) return null;
   return (
-    <Card className="group flex h-full flex-col overflow-hidden border-gray-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-sky-400 hover:shadow-lg hover:shadow-sky-100/40">
-      <div className="relative aspect-4/3 w-full overflow-hidden border-b border-gray-200 bg-neutral-100">
+    <Card className="group flex h-full flex-col overflow-hidden border-border bg-card transition-colors duration-200 hover:border-foreground/25">
+      <div className="relative aspect-4/3 w-full overflow-hidden border-b border-border bg-muted">
         <Image
           src={project.image}
           alt=""
@@ -46,27 +46,27 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <Badge
               key={tag}
               variant="outline"
-              className="rounded-none border-gray-300 bg-white px-2 py-0 text-[10px] font-black uppercase tracking-[0.08em] text-gray-600"
+              className="rounded-none border-border bg-transparent px-2 py-0 text-[10px] font-bold uppercase tracking-[0.08em] text-muted-foreground"
             >
               {tag}
             </Badge>
           ))}
         </div>
-        <CardTitle className="line-clamp-2 text-lg font-semibold leading-tight  transition-colors group-hover:text-sky-600">
+        <CardTitle className="line-clamp-2 text-lg font-semibold leading-tight text-foreground transition-colors group-hover:text-warm">
           {project.title}
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-1 px-5 pb-5 pt-0">
-        <p className="line-clamp-3 text-sm leading-relaxed text-gray-600">
+        <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
           {project.description}
         </p>
       </CardContent>
-      <CardFooter className="mt-auto items-center justify-between gap-3 border-t border-gray-200 bg-[#fbfbfb] p-5">
+      <CardFooter className="mt-auto items-center justify-between gap-3 border-t border-border bg-muted/40 p-5">
         {project.liveUrl && (
           <Button
             variant="outline"
             size="sm"
-            className="rounded-none border-gray-300 px-4 font-black uppercase tracking-[0.08em] hover:border-sky-400"
+            className="rounded-none border-border px-4 font-bold uppercase tracking-[0.08em] hover:border-foreground/30"
             asChild
           >
             <Link href={project.liveUrl} target="_blank" rel="noreferrer">
@@ -79,7 +79,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <Button
               variant="outline"
               size="sm"
-              className="rounded-none border-gray-300 px-4 font-black uppercase tracking-[0.08em] hover:border-sky-400"
+              className="rounded-none border-border px-4 font-bold uppercase tracking-[0.08em] hover:border-foreground/30"
               asChild
             >
               <Link href={project.githubUrl} target="_blank" rel="noreferrer">
@@ -90,7 +90,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <Button
                 variant="outline"
                 size="icon"
-                className="h-9 w-9 rounded-none border-gray-300 bg-white text-gray-700 transition-colors hover:border-sky-400 hover:text-sky-600"
+                className="h-9 w-9 rounded-none border-border bg-card text-foreground/60 transition-colors hover:border-foreground/30 hover:text-warm"
                 asChild
               >
                 <Link

@@ -5,17 +5,17 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f7f7f7] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 rounded-none",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 rounded-none",
   {
     variants: {
       variant: {
-        default: "bg-sky-400 text-white hover:bg-sky-500",
-        destructive: "bg-red-600 text-white hover:bg-red-700",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive: "bg-destructive text-white hover:bg-destructive/90",
         outline:
-          "border border-gray-200 bg-white text-[#0a0a0a] hover:border-sky-400 hover:text-sky-600",
-        secondary: "bg-[#0a0a0a] text-white hover:bg-neutral-800",
-        ghost: "hover:bg-neutral-100 text-[#0a0a0a]",
-        link: "text-sky-600 underline-offset-4 hover:underline",
+          "border border-border bg-card text-foreground hover:border-foreground/30",
+        secondary: "bg-foreground text-background hover:bg-foreground/90",
+        ghost: "text-foreground hover:bg-muted",
+        link: "text-warm underline-offset-4 hover:underline",
       },
       size: {
         default: "h-11 px-5 py-2",

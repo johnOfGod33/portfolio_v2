@@ -3,7 +3,7 @@
     "role": "Developpeur Fullstack",
     "metadata": {
       "defaultTitle": "Jean de Dieu Sessou — Developpeur Fullstack",
-      "description": "Jean de Dieu Sessou accompagne les startups et les fondateurs pour transformer une idee en produit web solide, du frontend au backend avec des fonctions IA utiles.",
+      "description": "Jean de Dieu Sessou accompagne les startups et fondateurs pour transformer une idee en produit web solide, du frontend au backend, avec les integrations IA qui font la difference.",
       "openGraph": {
         "title": "Jean de Dieu Sessou — Developpeur Fullstack pour startups",
         "description": "Je transforme vos idees en produits en ligne: interface, backend, paiements et IA. Disponible en freelance."
@@ -27,7 +27,7 @@
   "hero": {
     "availabilityBadge": "Disponible en freelance",
     "title": "Developpeur fullstack.",
-    "intro": "Je cree des applications web intelligentes et fiables qui repondent a des besoins metier concrets.",
+    "intro": "Je construis des APIs, des systemes de paiement et des briques IA. La couche backend qui fait tourner votre produit.",
     "highlights": [
       "De l'idee au produit en ligne, je gere frontend, backend et mise en production.",
       "Une base solide pour evoluer de vos premiers utilisateurs a une vraie phase de croissance.",
@@ -98,7 +98,7 @@
     "readMoreLabel": "Voir le profil complet",
     "introColumns": [
       "Je suis Jean de Dieu, developpeur fullstack base a Lome. Je construis des applications web de bout en bout, avec une expertise forte sur les APIs, la logique metier et les briques IA utiles au produit.",
-      "Actuellement en Master IA & Big Data, je combine rigueur d'ingenierie logicielle et capacites en machine learning pour livrer des produits performants et evolutifs."
+      "En cours de Master IA & Big Data. Ma formation en Genie Mecanique m'a appris a penser en systemes (contraintes, compromis, points de rupture), ce qui oriente directement ma facon de concevoir du logiciel."
     ]
   },
   "career": [

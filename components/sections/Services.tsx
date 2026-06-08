@@ -8,17 +8,14 @@ export function Services() {
   const services = siteContent.services;
 
   return (
-    <section className="bg-[#f7f7f7]">
-      <div className="mx-auto max-w-384 px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
-        <p className="text-xs font-black tracking-[0.35em] text-sky-500">
-          {siteContent.servicesSection.kicker}
-        </p>
-        <h1 className="mt-3 max-w-5xl text-4xl font-black uppercase  text-[#0a0a0a] sm:text-5xl lg:text-6xl">
+    <section className="bg-background">
+      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+        <h1 className="max-w-5xl text-balance text-balance text-2xl font-black uppercase text-foreground sm:text-3xl lg:text-4xl">
           {locale === "fr"
             ? "Des interventions pensees comme une equipe produit, avec un cadre clair."
             : "Engagements shaped like product teams, priced like partnerships."}
         </h1>
-        <p className="mt-6 max-w-4xl text-lg font-medium text-gray-600 sm:text-xl">
+        <p className="mt-6 max-w-4xl text-lg font-medium text-muted-foreground sm:text-xl">
           {locale === "fr"
             ? "Choisissez le format qui correspond a votre contexte: objectifs nets, livrables concrets et suivi regulier."
             : "Pick a lane below — each card is a focused collaboration with clear deliverables and weekly demos."}

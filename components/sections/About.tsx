@@ -21,12 +21,9 @@ export function About() {
   const educationEntries = siteContent.education;
 
   return (
-    <section className="border-b border-gray-200 bg-[#f7f7f7]">
-      <div className="mx-auto max-w-384 px-4 py-8 sm:px-6 lg:h-[calc(100dvh-72px)] lg:px-10 lg:py-6">
-        <p className="text-xs font-black tracking-[0.35em] text-sky-500">
-          {siteContent.aboutSection.kicker}
-        </p>
-        <h1 className="mt-2 text-3xl font-black uppercase  text-[#0a0a0a] sm:text-4xl lg:text-5xl">
+    <section className="border-b border-border bg-background">
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:h-[calc(100dvh-72px)] lg:px-10 lg:py-6">
+        <h1 className="text-balance text-2xl font-black uppercase text-foreground sm:text-3xl lg:text-4xl">
           {locale === "fr"
             ? "Ingenierie solide. Produits utiles."
             : "Editorial code. Reliable systems."}
@@ -34,23 +31,23 @@ export function About() {
         <div className="mt-5 grid gap-6 lg:h-[calc(100%-96px)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-7">
           <div className="space-y-6 lg:overflow-y-auto lg:pr-2">
             <div>
-              <h2 className="text-lg font-black tracking-wide text-[#0a0a0a]">
+              <h2 className="text-lg font-black tracking-wide text-foreground">
                 {locale === "fr" ? "Parcours professionnel" : "Career timeline"}
               </h2>
-              <ol className="mt-3 space-y-4 border-l-2 border-gray-200 pl-4">
+              <ol className="mt-3 space-y-4 border-l-2 border-border pl-4">
                 {careerEntries.map((entry) => (
                   <li key={entry.id} className="relative">
-                    <span className="absolute -left-[19px] top-1 h-2.5 w-2.5 border-2 border-sky-400 bg-white" />
-                    <p className="text-xs font-black tracking-wider text-sky-500">
+                    <span className="absolute -left-[19px] top-1 h-2.5 w-2.5 border-2 border-warm/60 bg-background" />
+                    <p className="text-xs font-black tracking-wider text-warm">
                       {entry.period}
                     </p>
-                    <h3 className="mt-0.5 text-sm font-black text-[#0a0a0a] sm:text-base">
+                    <h3 className="mt-0.5 text-sm font-black text-foreground sm:text-base">
                       {entry.role}
                     </h3>
-                    <p className="text-xs font-semibold tracking-wide text-gray-600 sm:text-sm">
+                    <p className="text-xs font-semibold tracking-wide text-muted-foreground sm:text-sm">
                       {entry.company}
                     </p>
-                    <p className="mt-1.5 text-xs leading-relaxed text-gray-600 sm:text-sm">
+                    <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground sm:text-sm">
                       {entry.description}
                     </p>
                   </li>
@@ -58,23 +55,23 @@ export function About() {
               </ol>
             </div>
             <div>
-              <h2 className="text-lg font-black tracking-wide text-[#0a0a0a]">
+              <h2 className="text-lg font-black tracking-wide text-foreground">
                 {locale === "fr" ? "Parcours academique" : "Education timeline"}
               </h2>
-              <ol className="mt-3 space-y-4 border-l-2 border-gray-200 pl-4">
+              <ol className="mt-3 space-y-4 border-l-2 border-border pl-4">
                 {educationEntries.map((entry) => (
                   <li key={entry.id} className="relative">
-                    <span className="absolute -left-[19px] top-1 h-2.5 w-2.5 border-2 border-sky-400 bg-white" />
-                    <p className="text-xs font-black tracking-wider text-sky-500">
+                    <span className="absolute -left-[19px] top-1 h-2.5 w-2.5 border-2 border-warm/60 bg-background" />
+                    <p className="text-xs font-black tracking-wider text-warm">
                       {entry.period}
                     </p>
-                    <h3 className="mt-0.5 text-sm font-black text-[#0a0a0a] sm:text-base">
+                    <h3 className="mt-0.5 text-sm font-black text-foreground sm:text-base">
                       {entry.degree}
                     </h3>
-                    <p className="text-xs font-semibold tracking-wide text-gray-600 sm:text-sm">
+                    <p className="text-xs font-semibold tracking-wide text-muted-foreground sm:text-sm">
                       {entry.school}
                     </p>
-                    <p className="mt-1.5 text-xs leading-relaxed text-gray-600 sm:text-sm">
+                    <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground sm:text-sm">
                       {entry.description}
                     </p>
                   </li>
@@ -82,19 +79,19 @@ export function About() {
               </ol>
             </div>
           </div>
-          <div className="space-y-5 border border-gray-200 bg-white p-5 sm:p-6 lg:overflow-y-auto">
+          <div className="space-y-5 border border-border bg-card p-5 sm:p-6 lg:overflow-y-auto">
             <div className="space-y-3">
               {aboutIntro.map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-sm font-medium leading-relaxed text-gray-600 sm:text-base"
+                  className="text-sm font-medium leading-relaxed text-muted-foreground sm:text-base"
                 >
                   {paragraph}
                 </p>
               ))}
             </div>
             <div>
-              <h2 className="text-lg font-black tracking-wide text-[#0a0a0a]">
+              <h2 className="text-lg font-black tracking-wide text-foreground">
                 {locale === "fr" ? "Competences & outils" : "Skills & tools"}
               </h2>
               <div className="mt-3 flex flex-wrap gap-2">
@@ -112,7 +109,7 @@ export function About() {
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-10 w-10 items-center justify-center border border-gray-200 bg-white text-[#0a0a0a] transition-colors hover:border-sky-400 hover:text-sky-600"
+                  className="inline-flex h-10 w-10 items-center justify-center border border-border bg-card text-foreground/70 transition-colors hover:border-warm hover:text-warm"
                   aria-label={label}
                 >
                   <Icon className="size-4" />

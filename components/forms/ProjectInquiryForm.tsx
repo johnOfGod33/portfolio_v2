@@ -60,7 +60,7 @@ export function ProjectInquiryForm() {
       <form onSubmit={handleSubmit} className="space-y-8">
         <div className="grid gap-6 sm:grid-cols-2">
           <label className="block space-y-2">
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500">
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">
               {locale === "fr" ? "Nom" : "First name"}
             </span>
             <input
@@ -69,12 +69,12 @@ export function ProjectInquiryForm() {
               onChange={(event) =>
                 setFormState((current) => ({ ...current, firstName: event.target.value }))
               }
-              className="w-full border-0 border-b border-gray-300 bg-transparent px-0 py-2 text-sm text-[#0a0a0a] outline-none transition-colors focus:border-sky-500"
+              className="w-full border-0 border-b border-border bg-transparent px-0 py-2 text-sm text-foreground outline-none transition-colors focus:border-warm"
               autoComplete="given-name"
             />
           </label>
           <label className="block space-y-2">
-            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500">
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">
               {locale === "fr" ? "Prenom" : "Last name"}
             </span>
             <input
@@ -83,14 +83,14 @@ export function ProjectInquiryForm() {
               onChange={(event) =>
                 setFormState((current) => ({ ...current, lastName: event.target.value }))
               }
-              className="w-full border-0 border-b border-gray-300 bg-transparent px-0 py-2 text-sm text-[#0a0a0a] outline-none transition-colors focus:border-sky-500"
+              className="w-full border-0 border-b border-border bg-transparent px-0 py-2 text-sm text-foreground outline-none transition-colors focus:border-warm"
               autoComplete="family-name"
             />
           </label>
         </div>
 
         <label className="block space-y-2">
-          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500">
+          <span className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground">
             {locale === "fr" ? "Details du projet" : "Project details"}
           </span>
           <textarea
@@ -100,7 +100,7 @@ export function ProjectInquiryForm() {
               setFormState((current) => ({ ...current, projectDetails: event.target.value }))
             }
             rows={4}
-            className="w-full resize-none border-0 border-b border-gray-300 bg-transparent px-0 py-2 text-sm text-[#0a0a0a] outline-none transition-colors focus:border-sky-500"
+            className="w-full resize-none border-0 border-b border-border bg-transparent px-0 py-2 text-sm text-foreground outline-none transition-colors focus:border-warm"
           />
         </label>
 
@@ -115,7 +115,7 @@ export function ProjectInquiryForm() {
       </form>
 
       {message ? (
-        <div className="fixed bottom-6 right-6 z-50 border border-sky-300 bg-sky-50 px-4 py-3 text-sm font-semibold text-sky-800 shadow-lg">
+        <div className="fixed bottom-6 right-6 z-50 border border-border bg-card px-4 py-3 text-sm font-semibold text-foreground shadow-sm">
           {message}
         </div>
       ) : null}

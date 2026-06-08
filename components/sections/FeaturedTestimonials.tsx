@@ -11,12 +11,9 @@ export function FeaturedTestimonials() {
   const testimonials = siteContent.testimonials as Testimonial[];
 
   return (
-    <section className="border-b border-gray-200 bg-[#f7f7f7]">
-      <SectionReveal className="mx-auto max-w-384 px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
-        <p className="text-xs font-black tracking-[0.35em] text-sky-500">
-          {siteContent.testimonialsSection.kicker}
-        </p>
-        <h2 className="mt-2 text-3xl font-black uppercase  text-[#0a0a0a] sm:text-4xl lg:text-5xl">
+    <section className="border-b border-border bg-background">
+      <SectionReveal className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+        <h2 className="text-balance text-2xl font-black uppercase text-foreground sm:text-3xl lg:text-4xl">
           {siteContent.testimonialsSection.title}
         </h2>
         <div className="mt-10">
@@ -24,17 +21,17 @@ export function FeaturedTestimonials() {
             {testimonials.map((item) => (
               <Card
                 key={item.id}
-                className="w-[320px] shrink-0 bg-white transition-colors hover:border-sky-400 sm:w-[360px]"
+                className="w-[320px] shrink-0 bg-card transition-colors hover:border-foreground/20 sm:w-[360px]"
               >
                 <CardHeader>
-                  <CardTitle className="text-xl">{item.name}</CardTitle>
-                  <p className="text-xs font-bold tracking-wide text-gray-500">
+                  <CardTitle className="text-xl text-foreground">{item.name}</CardTitle>
+                  <p className="text-xs font-semibold tracking-wide text-muted-foreground">
                     {item.role}
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm leading-relaxed text-gray-600">
-                    “{item.quote}”
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    &ldquo;{item.quote}&rdquo;
                   </p>
                 </CardContent>
               </Card>

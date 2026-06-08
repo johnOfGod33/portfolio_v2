@@ -8,18 +8,15 @@ export function Career() {
   const careerEntries = siteContent.career as CareerEntry[];
 
   return (
-    <section className="border-b border-gray-200 bg-white">
-      <div className="mx-auto max-w-384 px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
+    <section className="border-b border-border bg-card">
+      <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-black tracking-[0.35em] text-sky-500">
-              {locale === "fr" ? "Parcours" : "Career"}
-            </p>
-            <h2 className="mt-2 text-3xl font-black uppercase  text-[#0a0a0a] sm:text-4xl lg:text-5xl">
+            <h2 className="text-balance text-2xl font-black uppercase text-foreground sm:text-3xl lg:text-4xl">
               {locale === "fr" ? "Ou je suis passe" : "Where I've been"}
             </h2>
           </div>
-          <p className="max-w-2xl text-base text-gray-600">
+          <p className="max-w-2xl text-base text-muted-foreground">
             {locale === "fr"
               ? "Un apercu de mes experiences recentes, chacune a renforce ma vision produit et la rigueur technique."
               : "A horizontal slice of recent roles — each stop sharpened product sense and platform discipline."}
@@ -30,21 +27,21 @@ export function Career() {
             {careerEntries.map((entry, index) => (
               <article
                 key={entry.id}
-                className="min-w-[280px] shrink-0 border border-gray-200 bg-[#f7f7f7] p-5 shadow-sm transition-colors hover:border-sky-400 md:min-w-0"
+                className="min-w-[280px] shrink-0 border border-border bg-background p-5 transition-colors hover:border-foreground/25 md:min-w-0"
               >
-                <p className="text-[10px] font-black tracking-widest text-sky-500">
+                <p className="text-[10px] font-black tracking-widest text-muted-foreground/60">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-3 text-lg font-black leading-tight text-[#0a0a0a]">
+                <h3 className="mt-3 text-lg font-black leading-tight text-foreground">
                   {entry.role}
                 </h3>
-                <p className="mt-1 text-xs font-bold tracking-wide text-gray-600">
+                <p className="mt-1 text-xs font-bold tracking-wide text-muted-foreground">
                   {entry.company}
                 </p>
-                <p className="mt-2 text-xs font-semibold text-sky-600">
+                <p className="mt-2 text-xs font-semibold text-warm">
                   {entry.period}
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-gray-600">
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                   {entry.description}
                 </p>
               </article>

@@ -2,7 +2,6 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Card } from "@/components/ui/card";
 import type { BlogPost } from "@/lib/types";
 
 type BlogCardProps = {
@@ -28,35 +27,33 @@ export function BlogCard({ post }: BlogCardProps) {
       rel={isExternal ? "noreferrer" : undefined}
       className="block"
     >
-      <Card className="group overflow-hidden p-0 transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-400 hover:shadow-lg hover:shadow-sky-100/30">
-        <article className="grid grid-cols-[160px_1fr] items-center gap-5 p-4 sm:grid-cols-[280px_1fr] sm:gap-8 sm:p-6">
-          <div className="relative aspect-video w-full overflow-hidden border border-gray-200 bg-neutral-100">
-            <Image
-              src={post.coverImage}
-              alt=""
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-              sizes="(max-width: 640px) 160px, 280px"
-            />
-          </div>
-          <div className="min-w-0">
-            <p className="text-base font-black tracking-wide text-gray-500 sm:text-lg">
-              {new Date(post.publishedAt).getFullYear()}
-            </p>
-            <h3 className="mt-1 flex items-start gap-2 text-2xl font-black leading-[1.05]  text-[#0a0a0a] transition-colors group-hover:text-sky-600 sm:text-3xl">
-              <span className="line-clamp-2">{post.title}</span>
-              <ArrowUpRight className="mt-1 size-5 shrink-0" aria-hidden />
-            </h3>
-            <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-gray-600 sm:text-base">
-              {post.excerpt}
-            </p>
-            <p className="mt-3 text-sm font-medium text-gray-600 sm:text-base">
-              {post.author.name} · {formatDate(post.publishedAt)} ·{" "}
-              {post.readingTimeMinutes} min read
-            </p>
-          </div>
-        </article>
-      </Card>
+      <article className="group grid grid-cols-[160px_1fr] items-center gap-5 border-b border-border py-4 transition-colors last:border-b-0 hover:border-foreground/20 sm:grid-cols-[240px_1fr] sm:gap-8 sm:py-6">
+        <div className="relative aspect-video w-full overflow-hidden border border-border bg-muted">
+          <Image
+            src={post.coverImage}
+            alt=""
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+            sizes="(max-width: 640px) 160px, 240px"
+          />
+        </div>
+        <div className="min-w-0">
+          <p className="text-sm font-bold tracking-wide text-muted-foreground">
+            {new Date(post.publishedAt).getFullYear()}
+          </p>
+          <h3 className="mt-1 flex items-start gap-2 text-2xl font-black leading-[1.05] text-foreground transition-colors group-hover:text-warm sm:text-3xl">
+            <span className="line-clamp-2">{post.title}</span>
+            <ArrowUpRight className="mt-1 size-5 shrink-0" aria-hidden />
+          </h3>
+          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            {post.excerpt}
+          </p>
+          <p className="mt-3 text-sm font-medium text-muted-foreground">
+            {post.author.name} · {formatDate(post.publishedAt)} ·{" "}
+            {post.readingTimeMinutes} min read
+          </p>
+        </div>
+      </article>
     </Link>
   );
 }

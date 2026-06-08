@@ -1,12 +1,12 @@
 {
   "site": {
     "name": "Jean de Dieu Sessou",
-    "role": "Backend Developer",
+    "role": "Fullstack Developer",
     "copyright": "© 2026 Jean de Dieu Sessou. All rights reserved.",
     "metadata": {
       "defaultTitle": "Jean de Dieu Sessou — Fullstack Developer",
       "titleTemplate": "%s — Jean de Dieu Sessou",
-      "description": "Jean de Dieu Sessou is a freelance fullstack developer helping startups and founders build web apps from idea to launch — frontend, backend, and AI-powered features.",
+      "description": "Jean de Dieu Sessou is a freelance fullstack developer helping startups and founders build web apps from idea to launch: frontend, backend, and AI-powered features.",
       "keywords": [
         "fullstack developer",
         "freelance fullstack developer",
@@ -28,7 +28,7 @@
       ],
       "openGraph": {
         "title": "Jean de Dieu Sessou — Fullstack Developer for Startups",
-        "description": "I help founders turn ideas into live products — frontend, backend, payments, and AI features. Available for freelance.",
+        "description": "I help founders turn ideas into live products: frontend, backend, payments, and AI features. Available for freelance.",
         "url": "https://jeandedieu.dev",
         "image": "https://jeandedieu.dev/og-image.png",
         "type": "website"
@@ -36,7 +36,7 @@
       "twitter": {
         "card": "summary_large_image",
         "title": "Jean de Dieu Sessou — Fullstack Developer for Startups",
-        "description": "I help founders turn ideas into live products — frontend, backend, payments, and AI features. Available for freelance.",
+        "description": "I help founders turn ideas into live products: frontend, backend, payments, and AI features. Available for freelance.",
         "image": "https://jeandedieu.dev/og-image.png",
         "handle": "@jeandedieudev"
       }
@@ -56,14 +56,14 @@
   "hero": {
     "availabilityBadge": "Available for freelance",
     "name": "Jean de Dieu Sessou",
-    "title": "Backend developer.",
-    "intro": "I build intelligent APIs and reliable systems that solve real business problems.",
+    "title": "Fullstack developer.",
+    "intro": "I build APIs, payment systems, and AI features. The backend layer that makes your product work.",
     "highlights": [
-      "From idea to live product — I handle everything, frontend to backend.",
-      "Built to grow with you — from your first user to your first thousand.",
+      "From idea to live product: I handle everything, frontend to backend.",
+      "Built to grow with you, from your first user to your first thousand.",
       "Your product stays secure, fast, and ready to scale from day one."
     ],
-    "portraitImage": "https://media.licdn.com/dms/image/v2/D4E03AQEMGsX-8ON5Ww/profile-displayphoto-crop_800_800/B4EZ1NsMtaIUAI-/0/1775124971422?e=1778112000&v=beta&t=S_rBx3CzaifXmkZJl5-yRW8Ge6R2GlWu2Vb1bfFsLXQ",
+    "portraitImage": "/me.jpg",
     "typingAnimation": {
       "typeSpeed": 150,
       "delay": 500,
@@ -105,7 +105,7 @@
   "projects": [
     {
       "id": "p2",
-      "title": "Kizo — Event Platform",
+      "title": "Kizo: Event Platform",
       "description": "Co-founded and built a platform that helps people discover events, receive personalized reminders, and connect around shared experiences.",
       "image": "/kizo.png",
       "tags": ["Next.js", "Supabase", "MongoDB", "TypeScript"],
@@ -115,7 +115,7 @@
     {
       "id": "p1",
       "title": "Password Generator",
-      "description": "this website will generate a ramdom password. Depending on the chosen criteria we'll have a weak, medium, strong and very strong ",
+      "description": "Generates passwords based on custom criteria (length, symbols, numbers) and rates strength in real time.",
       "tags": ["HTML", "CSS", "JavaScript"],
       "image": "https://github.com/johnOfGod33/password-generator/raw/main/assets/passwordGenerator.PNG",
       "liveUrl": "https://johnofgod33.github.io/password-generator/",
@@ -126,7 +126,7 @@
       "id": "p5",
       "title": "Personal Blog API",
       "tags": ["Node.js", "Express", "MongoDB", "JWT"],
-      "description": "A RESTful API that would power a personal blog.The client interface can be found",
+      "description": "RESTful API powering a personal blog — handles posts, categories, user authentication, and public/private access control.",
       "image": "https://github.com/johnOfGod33/Personal-Blog-API/raw/main/assets/Personal%20blog%20api.png",
       "liveUrl": "https://personal-blog-api-7cge.onrender.com/api-docs/",
       "githubUrl": "https://github.com/johnOfGod33/Personal-Blog-API",
@@ -155,7 +155,7 @@
       "id": "p6",
       "title": "Admin Blog Panel",
       "tags": ["React.js", "Node.js", "Express", "MongoDB", "JWT"],
-      "description": "A web application that allows users to create and manage blog posts ",
+      "description": "Content management interface for writing, editing, and publishing blog posts — with authentication and draft support.",
       "image": "https://github.com/johnOfGod33/admin-blog-panel/raw/main/src/assets/img/articles_homepage.png",
       "githubUrl": "https://github.com/johnOfGod33/admin-blog-panel",
       "display": true
@@ -164,7 +164,7 @@
       "id": "p7",
       "title": "Caching Proxy CLI",
       "tags": ["Node.js", "Express", "Redis"],
-      "description": "A command-line interface that runs a server to intercept requests and save responses in cache ",
+      "description": "CLI tool that spins up a caching proxy — intercepts HTTP requests and stores responses to Redis to cut redundant upstream calls.",
       "image": "https://github.com/johnOfGod33/Caching-Proxy-CLI/raw/main/asset/cli%20example.png",
       "githubUrl": "https://github.com/johnOfGod33/Caching-Proxy-CLI",
       "display": true
@@ -173,7 +173,7 @@
       "id": "p8",
       "title": "portfolio v1",
       "tags": ["Next.js", "Tailwind CSS", "TypeScript"],
-      "description": "this is the first version of my portfolio, it was built with Next.js, Tailwind CSS, and TypeScript.",
+      "description": "First version of my portfolio, built with Next.js, Tailwind CSS, and TypeScript.",
       "image": "https://github.com/johnOfGod33/Portfolio/raw/main/public/Portfolio.png",
       "liveUrl": "https://v1.jeandedieu.dev",
       "githubUrl": "https://github.com/johnOfGod33/Portfolio",
@@ -182,7 +182,7 @@
   ],
   "testimonialsSection": {
     "kicker": "Client Reviews",
-    "title": "Trusted by people"
+    "title": "What clients say"
   },
   "testimonials": [
     {
@@ -246,7 +246,7 @@
     "readMoreLabel": "Read full profile",
     "introColumns": [
       "I'm Jean de Dieu, a backend developer based in Lomé, Togo. I specialize in building APIs and intelligent systems — from secure authentication to AI-powered matching engines. I'm also the co-founder of Kizo, an event platform I built from the ground up.",
-      "Currently pursuing a Master's in AI & Big Data, I bridge solid backend engineering with machine learning capabilities. My background in Mechanical Engineering gives me a problem-solving mindset that I apply to every system I build."
+      "Finishing a Master's in AI & Big Data. My Mechanical Engineering background trained me to think in systems — constraints, tradeoffs, failure modes — which shows in how I design and build software."
     ],
     "skillTags": [
       "Python",
@@ -327,7 +327,7 @@
   },
   "contactSection": {
     "titleLine1": "Let's",
-    "titleLine2": "Connect",
+    "titleLine2": "Talk",
     "intro": "Available for freelance projects and collaborations. I typically respond within 24 hours.",
     "channels": [
       {

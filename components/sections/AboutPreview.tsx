@@ -11,19 +11,16 @@ export function AboutPreview() {
   const aboutIntro = siteContent.aboutSection.introColumns;
 
   return (
-    <section className="border-b border-gray-200 bg-[#f7f7f7]">
-      <SectionReveal className="mx-auto max-w-384 px-4 py-14 sm:px-6 lg:px-10 lg:py-20">
-        <p className="text-xs font-black tracking-[0.35em] text-sky-500">
-          {siteContent.aboutSection.kicker}
-        </p>
-        <h2 className="mt-2 text-3xl font-black uppercase  text-[#0a0a0a] sm:text-4xl lg:text-5xl">
+    <section className="border-b border-border bg-background">
+      <SectionReveal className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
+        <h2 className="text-balance text-2xl font-black uppercase text-foreground sm:text-3xl lg:text-4xl">
           {siteContent.aboutSection.title}
         </h2>
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           {aboutIntro.map((paragraph, index) => (
             <p
               key={index}
-              className="text-base leading-relaxed text-gray-600 sm:text-lg"
+              className="text-base leading-relaxed text-muted-foreground sm:text-lg"
             >
               {paragraph}
             </p>

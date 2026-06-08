@@ -25,7 +25,7 @@ export function BlogExplorer({ posts }: BlogExplorerProps) {
 
   return (
     <>
-      <div className="mt-10 space-y-4 border border-gray-200 bg-white p-4 sm:p-5">
+      <div className="mt-10 space-y-4 border border-border bg-card p-4 sm:p-5">
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => {
             const isActive = activeTag === tag;
@@ -36,8 +36,8 @@ export function BlogExplorer({ posts }: BlogExplorerProps) {
                 onClick={() => setActiveTag(tag)}
                 className={`border px-3 py-1 text-xs font-bold tracking-wide transition-colors ${
                   isActive
-                    ? "border-sky-500 bg-sky-50 text-sky-700"
-                    : "border-gray-300 bg-white text-gray-600 hover:border-sky-400"
+                    ? "border-warm/60 bg-warm/10 text-warm-dim"
+                    : "border-border bg-transparent text-muted-foreground hover:border-foreground/30 hover:text-foreground"
                 }`}
               >
                 {tag === "all" ? "All" : tag}
@@ -45,20 +45,22 @@ export function BlogExplorer({ posts }: BlogExplorerProps) {
             );
           })}
         </div>
-        <p className="text-xs font-semibold text-gray-500">
+        <p className="text-xs font-semibold text-muted-foreground">
           {filteredPosts.length} result{filteredPosts.length === 1 ? "" : "s"}
         </p>
       </div>
 
-      <div className="mt-8 space-y-4">
+      <div className="mt-8">
         {filteredPosts.length ? (
-          filteredPosts.map((post) => (
-            <div key={post.id} id={post.id}>
-              <BlogCard post={post} />
-            </div>
-          ))
+          <div className="border border-border bg-card px-4 sm:px-6">
+            {filteredPosts.map((post) => (
+              <div key={post.id} id={post.id}>
+                <BlogCard post={post} />
+              </div>
+            ))}
+          </div>
         ) : (
-          <div className="border border-dashed border-gray-300 bg-white p-6 text-sm text-gray-600">
+          <div className="border border-dashed border-border bg-card p-6 text-sm text-muted-foreground">
             No post found for this tag.
           </div>
         )}

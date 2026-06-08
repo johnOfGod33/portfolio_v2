@@ -8,11 +8,11 @@ export function Navbar() {
   const { locale, setLocale, siteContent } = useLocale();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto grid max-w-384 grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 py-4 sm:px-6 lg:px-10">
+    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
+      <div className="mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 py-4 sm:px-6 lg:px-10">
         <Link
           href="/"
-          className="justify-self-start text-sm font-black tracking-widest text-[#0a0a0a] transition-colors hover:text-sky-600"
+          className="justify-self-start text-sm font-black tracking-widest text-foreground transition-colors hover:text-warm"
         >
           {siteContent.navigation.brandLabel}
         </Link>
@@ -24,7 +24,7 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="px-3 py-2 text-xs font-bold tracking-wide text-gray-600 transition-colors hover:text-[#0a0a0a]"
+              className="px-3 py-2 text-xs font-semibold tracking-wide text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>
@@ -36,18 +36,18 @@ export function Navbar() {
               type="button"
               onClick={() => setLocale("en")}
               className={`px-2 py-1 text-xs font-black tracking-wider transition-colors ${
-                locale === "en" ? "text-[#0a0a0a]" : "text-gray-400 hover:text-gray-600"
+                locale === "en" ? "text-foreground" : "text-muted-foreground/50 hover:text-muted-foreground"
               }`}
               aria-pressed={locale === "en"}
             >
               EN
             </button>
-            <span className="text-gray-300">/</span>
+            <span className="text-border">|</span>
             <button
               type="button"
               onClick={() => setLocale("fr")}
               className={`px-2 py-1 text-xs font-black tracking-wider transition-colors ${
-                locale === "fr" ? "text-[#0a0a0a]" : "text-gray-400 hover:text-gray-600"
+                locale === "fr" ? "text-foreground" : "text-muted-foreground/50 hover:text-muted-foreground"
               }`}
               aria-pressed={locale === "fr"}
             >
@@ -55,26 +55,26 @@ export function Navbar() {
             </button>
           </div>
           <details className="group relative md:hidden">
-            <summary className="cursor-pointer list-none border border-gray-200 bg-white px-3 py-2 text-xs font-black tracking-wide text-[#0a0a0a] transition-colors hover:border-sky-400 [&::-webkit-details-marker]:hidden">
-              {locale === "fr" ? "Menu" : "Menu"}
+            <summary className="cursor-pointer list-none border border-border bg-card px-3 py-2 text-xs font-bold tracking-wide text-foreground transition-colors hover:border-warm [&::-webkit-details-marker]:hidden">
+              Menu
             </summary>
-            <div className="absolute right-0 mt-2 w-52 border border-gray-200 bg-white shadow-sm">
-              <div className="flex items-center justify-end gap-2 border-b border-gray-100 px-4 py-2">
+            <div className="absolute right-0 mt-2 w-52 border border-border bg-card shadow-sm">
+              <div className="flex items-center justify-end gap-2 border-b border-border px-4 py-2">
                 <button
                   type="button"
                   onClick={() => setLocale("en")}
                   className={`text-xs font-black tracking-wider ${
-                    locale === "en" ? "text-[#0a0a0a]" : "text-gray-400"
+                    locale === "en" ? "text-foreground" : "text-muted-foreground/50"
                   }`}
                 >
                   EN
                 </button>
-                <span className="text-gray-300">/</span>
+                <span className="text-muted-foreground/30">/</span>
                 <button
                   type="button"
                   onClick={() => setLocale("fr")}
                   className={`text-xs font-black tracking-wider ${
-                    locale === "fr" ? "text-[#0a0a0a]" : "text-gray-400"
+                    locale === "fr" ? "text-foreground" : "text-muted-foreground/50"
                   }`}
                 >
                   FR
@@ -84,7 +84,7 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block border-b border-gray-100 px-4 py-3 text-xs font-bold tracking-wide text-gray-600 last:border-b-0 hover:bg-neutral-50 hover:text-[#0a0a0a]"
+                  className="block border-b border-border px-4 py-3 text-xs font-semibold tracking-wide text-muted-foreground last:border-b-0 hover:bg-muted hover:text-foreground"
                 >
                   {link.label}
                 </Link>

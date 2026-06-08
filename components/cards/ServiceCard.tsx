@@ -21,32 +21,32 @@ export function ServiceCard({ service }: ServiceCardProps) {
 
   return (
     <Card
-      className={`relative flex h-full flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-sky-400 hover:shadow-lg hover:shadow-sky-100/30 ${
-        isFeatured ? "border-sky-400 shadow-md" : ""
+      className={`relative flex h-full flex-col overflow-hidden transition-colors duration-200 hover:border-foreground/25 ${
+        isFeatured ? "border-warm/40" : "border-border"
       }`}
     >
       {service.badge ? (
         <div className="absolute right-0 top-0">
           <Badge
             variant="accent"
-            className="rounded-none border-0 bg-sky-400 text-white"
+            className="rounded-none border-0 bg-warm text-background"
           >
             {service.badge}
           </Badge>
         </div>
       ) : null}
       <CardHeader className={`gap-2 ${service.badge ? "pr-24" : ""}`}>
-        <CardTitle className="text-2xl">{service.title}</CardTitle>
+        <CardTitle className="text-2xl text-foreground">{service.title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-1 space-y-4">
-        <p className="text-sm leading-relaxed text-gray-600">
+        <p className="text-sm leading-relaxed text-muted-foreground">
           {service.description}
         </p>
-        <ul className="space-y-2 text-sm text-[#0a0a0a]">
+        <ul className="space-y-2 text-sm text-foreground">
           {service.points.map((point) => (
             <li key={point} className="flex gap-2">
               <Check
-                className="mt-0.5 size-4 shrink-0 text-sky-500"
+                className="mt-0.5 size-4 shrink-0 text-warm/60"
                 aria-hidden
               />
               <span>{point}</span>
